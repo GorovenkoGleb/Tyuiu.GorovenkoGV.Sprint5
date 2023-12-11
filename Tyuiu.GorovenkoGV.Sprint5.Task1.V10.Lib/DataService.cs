@@ -26,8 +26,19 @@ namespace Tyuiu.GorovenkoGV.Sprint5.Task1.V10.Lib
             string strY;
             for (int x = startValue; x <= stopValue; x++)
             {
-                y = Math.Round
+                y = Math.Round((((2 * Math.Cos(x) + 2) / (2 * x - 1)) + Math.Cos(x) - 5 * x + 3), 2);
+                strY = Convert.ToString(y);
+
+                if (x != stopValue)
+                {
+                    File.AppendAllText(path, strY + Environment.NewLine);
+                }
+                else
+                {
+                    File.AppendAllText(path, strY);
+                }
             }
+            return path;
         }
     }
 }
