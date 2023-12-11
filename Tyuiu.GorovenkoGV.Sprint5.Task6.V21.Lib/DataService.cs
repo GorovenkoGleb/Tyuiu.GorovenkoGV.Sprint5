@@ -20,10 +20,11 @@ namespace Tyuiu.GorovenkoGV.Sprint5.Task6.V21.Lib
                 {
                     for (int i = 0; i < line.Length-1; i++)
                     {
-                        if (line[i] == line[i + 1])
-                        {
-                            count++;
-                        }
+                        line = line.Replace('!','#');
+                        line = line.Replace(',', '#');
+                        line = line.Replace('?', '#');
+                        line = line.Replace('-', '#');
+                        line = line.Replace('.', '#');
                     }
                 }    
             }
